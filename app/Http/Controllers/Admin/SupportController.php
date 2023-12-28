@@ -10,10 +10,11 @@ class SupportController extends Controller
 {
     public function index(Support $support)
     {
+        // RETORNA TODOS OS DADOS DO BANCO
         $supports = $support->all();
 
-        dd($supports);
+        //dd($supports);
 
-        return view("admin.supports.index", compact('$supports'));
+        return view("admin.supports.index", compact('supports'));
     }
 }
